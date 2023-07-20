@@ -305,9 +305,11 @@
         @include mobile-min {
             width: 80%;
             margin: 0px auto;
+        }
         @include mobile {
             width: 80%;
             margin: 0px auto;
+        }
         @include tablet {
             width: 80%;
             margin: 0px auto;
