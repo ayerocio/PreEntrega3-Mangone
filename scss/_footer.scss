@@ -1,0 +1,10 @@
+.container_footer {
+    position: absolute;
+    width:100%;
+    grid-area: footer;
+    padding: 1em 0;
+    bottom: 0;    
+    font-size: 0.8rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgba(137, 43, 226, 0.271);
+}

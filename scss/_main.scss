@@ -1,0 +1,327 @@
+// ---INDEX---
+.container_main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 70% 30%;
+    grid-template-areas: 
+    "carrousel carrousel"
+    "banner suscrib"
+    ;
+    padding: 1px;
+    @include mobile-min {
+        @include responsive-grid(1fr, auto, 0, "carrousel" "banner" "suscrib");
+    }
+    @include mobile {
+        @include responsive-grid(1fr, auto, 0,"carrousel" "banner" "suscrib");
+
+    }
+    @include tablet {
+        @include responsive-grid(1fr, auto, 0,"carrousel" "banner" "suscrib");
+    }
+    @include desktop {
+        @include responsive-grid(1fr, auto, 0,"carrousel" "banner" "suscrib");
+    }
+
+    .container_carrousel {
+        grid-area: carrousel;
+        
+    }
+    .container_banner {
+        grid-area: banner;
+        display: flex;
+        flex-direction: row;
+        justify-self: start;
+        img {
+            width: 170px;
+        }
+    }
+    .container_suscripcion {
+        grid-area: suscrib;
+        display: flex;
+        align-items: center;
+        grid-row-gap: 5px;
+        justify-content: center;
+        padding: 3px;
+        vertical-align: middle;
+        margin-bottom: 30px;
+        padding: 1px;
+        background-color: rgba(168,196,255,56);
+        border-radius: 5px;
+        .imagen_sobre {
+            width: 100px !important;
+            margin-top: 50px !important;
+            &:hover {
+                width: 120px !important;
+            }
+
+        }
+    }
+}
+
+// --SOBRE MI---
+.container_main_about {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "container_about"
+    "container_stickers"
+    ;
+    font-family: $fuente-parrafos;
+    @include mobile-min {
+        @include responsive-grid(1fr, auto, 0, "container_about" "container_stickers");
+    }
+    @include mobile {
+        @include responsive-grid(1fr, auto, 0,"container_about" "container_stickers");
+
+    }
+    @include tablet {
+        @include responsive-grid(1fr, auto, 0,"container_about" "container_stickers");
+    }
+    @include desktop {
+        @include responsive-grid(1fr, auto, 0,"container_about" "container_stickers");
+    }
+    .container_about {
+        width: 70%;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+        padding: 5px;
+        grid-area: container_about;
+ 
+        #about_img {
+            width: 30%;
+            border-radius: 100%;
+            margin-top: 40px;
+        }
+        .titulo_about {
+            font-size: 2rem;
+            font-family: $fuente-titulo1;
+            color: rgba(137, 43, 226, 0.651);
+            margin-top: 20px;
+            font-style: bold;
+        }
+        .text_about {
+            color: rgb(85, 112, 136);
+            margin-top: 10px;
+        }
+    }
+    .container_stickers_about {
+        grid-area: container_stickers;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+        img {
+            width: 50%;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+// --PORTFOLIO--
+.container_main-portfolio {
+    grid-area: main;
+    padding: 1px;
+        .container_proyectos {
+            display: flex;
+            padding: 30px 50px;
+            text-align: center;
+            flex-direction: column;
+            .titulo_proyectos {
+                font-size: 1rem;
+                color: rgba(137, 43, 226, 0.651);
+                letter-spacing: 2px;
+                margin-top: 30px;
+            }
+            .imagenes_proyectos {
+                width: 200px;
+                margin: 10px;
+            }
+        }
+    }
+
+// --TIENDA--
+.container_main-tienda {
+    grid-area: main;
+    padding: 1px;
+    display: grid;
+    grid-template-columns: repeat(2, 0.8fr);
+    grid-template-rows: repeat(2, 08fr);
+    grid-gap: 30px;
+    justify-content: center;
+    text-align: center;
+    @include mobile-min {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    @include mobile {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    @include tablet {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    } 
+    @include desktop {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .box_tienda_1 {
+        margin-left: 180px;
+        width: 350px;
+        height: auto;
+        padding: 30px;
+        text-align: center;
+        flex-direction: column;
+        border: 1px solid black;
+        border-radius: 10px;
+        display:flex;
+        flex-direction: column;
+        @include mobile-min {
+            margin: 0px auto;
+        }
+        @include mobile {
+            margin: 3px;
+        }
+        @include tablet {
+            margin: 3px;
+        } 
+        @include desktop {
+            margin: 3px;
+        }
+        &:hover {
+            background-color: $color-fondo;
+        }
+        a {
+            text-decoration: none;
+            p {
+                font-size: 1rem;
+                color: rgba(137, 43, 226, 0.651);
+                letter-spacing: 2px;
+                margin-top: 30px;
+                &:hover {
+                font-style: bold;
+                font-size: 1.5rem;
+                }
+            }
+            img {
+                width: 300px;
+            }
+        }
+    }
+    .box_tienda_2 {
+        width: 350px;
+        height: auto;
+        padding: 30px;
+        text-align: center;
+        flex-direction: column;
+        border: 1px solid black;
+        border-radius: 10px;
+        &:hover {
+            background-color: $color-fondo;
+        }
+        a {
+            text-decoration: none;
+            p {
+                font-size: 1rem;
+                color: rgba(137, 43, 226, 0.651);
+                letter-spacing: 2px;
+                margin-top: 30px;
+                &:hover {
+                font-style: bold;
+                font-size: 1.5rem;
+                }
+            }
+            img {
+                width: 300px;
+            }
+        }
+    }
+}
+
+// --CONTACTO-
+.container_main-contacto {
+    width: 100%;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
+    grid-template-rows: 50%;
+    grid-template-areas: 
+    ".container_gracias container_form container_form";
+    @include mobile-min {
+        @include responsive-grid(1fr, auto, 0, "container_gracias" "container_form");
+    }
+    @include mobile {
+        @include responsive-grid(1fr, auto, 0,"container_gracias" "container_form");
+
+    }
+    @include tablet {
+        @include responsive-grid(1fr, auto, 0,"container_gracias" "container_form");
+    }
+    @include desktop {
+        @include responsive-grid(1fr, auto, 0,"container_gracias" "container_form");
+    }
+    .container_gracias {
+        width: 100%;
+        grid-area: container_gracias;
+        text-align: center;
+        img {
+            width: 90%;
+            margin-top: 60px;
+            margin-right: 50px;
+            @include mobile-min {
+               width: 200px;
+               margin: 0px auto
+            }
+            @include mobile {
+                width: 200px;
+                margin: 0px auto
+             }
+             @include tablet {
+                width: 200px;
+                margin: 0px auto
+             }
+             @include desktop {
+                width: 200px;
+                margin: 0px auto
+             }
+        }
+    }
+    .container_form {
+        width: 80%;
+        margin-top: 40px;
+        grid-area: container_form;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+        @include mobile-min {
+            width: 80%;
+            margin: 0px auto
+         }
+        .contactame_text {
+            text-align: start !important;
+            font-size: 3rem;
+            font-family: $fuente-titulo1;
+            color: rgba(137, 43, 226, 0.651);
+        }
+        .form_group {
+            width: 100%;
+            margin: 10px 0px;
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+            color: rgb(85, 112, 136) !important;
+            .contactame_boton {
+                text-align:justify !important;
+                margin-left: 120px;
+                }
+        }
+    }
+}

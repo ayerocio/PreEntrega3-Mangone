@@ -1,0 +1,51 @@
+// --RESET--
+@mixin reset {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// --RESPONSIVE--
+@mixin responsive-grid($column, $row, $gap, $areas) {
+    grid-template-columns: $column;
+    grid-template-rows: $row;
+    gap: $gap;
+    grid-template-areas: $areas;
+}
+
+@mixin logo-responsive($width, $ml) {
+    width: $width;
+    margin-left: $ml;
+}
+
+@mixin menu-responsive($margin, $letterspace, $size) {
+    margin: $margin;
+    letter-spacing: $letterspace;
+    font-size: $size;
+}
+
+// ---MEDIA QUERIES--
+
+@mixin mobile-min {
+    @media screen and (max-width: 320px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: 481px) and (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 601px) and (max-width: 800px) {
+        @content;
+    }
+}
