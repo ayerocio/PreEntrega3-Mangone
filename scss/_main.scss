@@ -304,7 +304,13 @@
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
         @include mobile-min {
             width: 80%;
-            margin: 0px auto
+            margin: 0px auto;
+        @include mobile {
+            width: 80%;
+            margin: 0px auto;
+        @include tablet {
+            width: 80%;
+            margin: 0px auto;
          }
         .contactame_text {
             text-align: start !important;
